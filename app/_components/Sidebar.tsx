@@ -55,7 +55,7 @@ const Sidebar = () => {
           {menuItems.map((item) => {
             const Icon = item.icon;
             return (
-              <>
+              
                 <li key={item.name}>
                   <Link
                     href={item.link}
@@ -71,7 +71,7 @@ const Sidebar = () => {
                     {!collapsed && <span>{item.name}</span>}
                   </Link>
                 </li>
-              </>
+              
             );
           })}
           <div className="hidden sm:block mt-4">

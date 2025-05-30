@@ -19,11 +19,20 @@ import { useRouter } from "next/navigation";
 import ProtectedRoute from "@/app/hooks/UseProtectedRoute";
 import { useAddUserFormik } from "@/app/hooks/useAddUserFormik"; 
 
+
+interface AddUserFormValues {
+  name: string;
+  username: string;
+  email: string;
+  phone: string;
+}
+
+
 const AddUser = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = async (values: any) => {
+  const onSubmit = async (values: AddUserFormValues) => {
     setLoading(true);
     try {
       const response = await fetch(

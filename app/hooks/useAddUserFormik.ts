@@ -2,8 +2,15 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-export const useAddUserFormik = (onSubmit: (values: any) => Promise<void>) => {
-  const formik = useFormik({
+export interface AddUserFormValues {
+  name: string;
+  username: string;
+  email: string;
+  phone: string;
+}
+
+export const useAddUserFormik = (onSubmit: (values: AddUserFormValues) => Promise<void>) => {
+  const formik = useFormik<AddUserFormValues>({
     initialValues: {
       name: "",
       username: "",
