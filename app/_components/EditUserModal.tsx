@@ -69,7 +69,7 @@ const EditUserModal = ({ user }: EditUserModalProps) => {
         <DialogHeader>
           <DialogTitle>Edit Profile {user.name}</DialogTitle>
           <DialogDescription>
-            Make changes to {user.name}'s profile.
+            Make changes to {user.name} s profile
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
