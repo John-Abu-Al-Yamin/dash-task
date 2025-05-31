@@ -24,22 +24,10 @@ const Loading = () => {
         </div>
         
         {/* Optional message */}
-        <p className="text-gray-500 mt-4 text-sm animate-fade-in">
+        <p className="text-gray-500 mt-4 text-sm animate-pulse">
           Please wait while we prepare everything for you...
         </p>
       </div>
-      
-      {/* Custom CSS for additional animations */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 2s ease-in-out infinite alternate;
-        }
-      `}</style>
     </div>
   );
 };
